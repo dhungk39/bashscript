@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -euo pipefail
 #backup file sudoers
 sudo cp /etc/sudoers /etc/sudoers.bak
 #Add permisson to curent user
