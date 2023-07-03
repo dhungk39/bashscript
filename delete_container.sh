@@ -13,3 +13,6 @@ total_lines=$(wc -l < "$file")
 lines_to_delete=$((total_lines - lines_to_exclude))
 # print lines want delete and delete it
 head -n "$lines_to_delete" "$file" | xargs docker container rm
+
+# delete image <none>
+#docker images -a | grep "<none>" | awk '{print $3}' | xargs docker rmi
